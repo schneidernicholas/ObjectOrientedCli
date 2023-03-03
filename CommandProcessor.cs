@@ -47,7 +47,7 @@ namespace CLI
                 AddAliases(command, addCommand)
             );
 
-            addCommand.SetHandler((context) => command.Execute(context));
+            addCommand.SetHandler(command.Execute);
 
             _rootCommand.AddCommand(addCommand);
         }
